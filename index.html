@@ -1,0 +1,30 @@
+---
+layout: home
+---
+<header class="page-header text-center">
+  <h1 class="page-title text-overflow">Beyond Tokyo</h1>
+  <p>A VR adventure coming soon exclusively on:</p>
+  <a class="button text-overflow" href="#">Get on Littlstar</a>
+</header>
+
+<article class="page-body text-center">
+  {% if site.video_id and site.video_id != "" %}
+  <div class="video-container">
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/{{ site.video_id }}?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  {% endif %}
+  <p class="page-copy">Beyond Tokyo is a new and different kind of VR travel experience through Shibuya, a popular neighborhood in Tokyo. Explore an immersive environment that showcases different points of interest with photos, 360 videos, audio narration, and interactive storytelling. Experience the hustle and bustle of the famous Shibuya Crossing, a visit to an izakaya restaurant where locals unwind, “fishing” in Shibuya, the renowned fashion culture in Harajuku, the importance of spirituality in daily lives, the story of Japan’s most loyal dog "Hachiko", and even some quirky urban legends of the area. It is a family-friendly experience for all ages and for anyone interested in traveling to Japan or learning more about Japanese culture.</p>
+    <ul class="gallery-list list-reset">
+      {% for image in site.data.gallery %}
+      <li class="gallery-item">
+        <a href="/images/gallery/{{ image.path }}"><img src="/images/Loading.png" data-src="/images/gallery/{{ image.path }}" alt="{{ image.title }}" /></a>
+      </li>
+      {% endfor %}
+    </ul>
+  <!-- <p>Try it now on:</p>
+  <a class="button text-overflow" href="#">Get on Littlstar</a> -->
+</article>
+
+<footer class="page-footer text-center">
+  <p>Created by <a href="http://www.thesoapcollective.com" target="_blank">The Soap Collective</a>, <a href="https://wilab.com" target="_blank">World Innovation Lab</a>, and <a href="http://www.ana.co.jp" target="_blank">All Nippon Airways</a>.</p>
+</footer>
