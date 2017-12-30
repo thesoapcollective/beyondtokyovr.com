@@ -21,5 +21,12 @@
     <script src="{{ "/js/jquery.unveil.js" | prepend: site.baseurl }}" type="text/javascript"></script>
     <script src="{{ "/js/jquery.magnific-popup.js" | prepend: site.baseurl }}" type="text/javascript"></script>
     <script src="{{ "/js/app.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_id }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ site.google_analytics_id }}');
+    </script>
   </body>
 </html>
