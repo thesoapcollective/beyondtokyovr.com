@@ -141,6 +141,7 @@ a {
 }
 
 .page-footer {
+  margin-top: $grid-size-double * 2;
   font-size: 0.667rem;
 }
 
@@ -162,7 +163,7 @@ a {
   height: 72px;
   margin: $grid-size-double auto 0;
   display: block;
-  background: url('../images/LittlstarButton.png') no-repeat 0 0;
+  background: url('../images/ViveportButton.png') no-repeat 0 0;
   background-size: 231px 72px;
 }
 
@@ -196,6 +197,30 @@ a {
     width: 100%;
   }
 }
+
+.social-list {
+  margin-top: $grid-size-double;
+}
+
+.social-list-item {
+  margin-right: $grid-size;
+  display: inline-block;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social-list-icon,
+.social-list-text {
+  vertical-align: middle;
+}
+
+.social-list-icon {
+  font-size: 1.5rem;
+}
+
+.social-list-text {}
 
 // ==================================================
 // RESPONSIVE
