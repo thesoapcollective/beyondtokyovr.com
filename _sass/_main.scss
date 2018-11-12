@@ -158,13 +158,26 @@ a {
   margin-bottom: $grid-size-double;
 }
 
+.button-container {
+  font-size: 0;
+}
+
 .button {
   width: 231px;
   height: 72px;
-  margin: $grid-size-double auto 0;
-  display: block;
-  background: url('../images/ViveportButton.png') no-repeat 0 0;
+  margin: $grid-size-double $grid-size-half 0;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 0 0;
   background-size: 231px 72px;
+
+  &.viveport {
+    background-image: url('../images/ViveportButton.png');
+  }
+
+  &.steam {
+    background-image: url('../images/SteamButton.png');
+  }
 }
 
 .video-container {
@@ -225,4 +238,9 @@ a {
 // ==================================================
 // RESPONSIVE
 // ==================================================
-@media only screen and (max-width: $responsive-max-page-width) {}
+@media only screen and (max-width: 400px) {
+  .page-title {
+    width: 284px;
+    background-size: contain;
+  }
+}
